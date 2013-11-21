@@ -19,7 +19,8 @@ module Devise
         private
 
         def mailer_class(resource = nil)
-          @mailer_class ||= resource.try(:devise_mailer) || Devise.mailer
+          # @mailer_class ||= resource.try(:devise_mailer) || Devise.mailer
+          @mailer_class ||= Devise.mailer
         end
       end
     end
